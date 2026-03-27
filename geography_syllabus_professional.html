@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complete Geography Syllabus</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink: #1a1208;
+  --parchment: #f5efe0;
+  --parchment-dark: #ede4cc;
+  --sepia: #8b6c42;
+  --sepia-light: #c4a87a;
+  --sepia-dark: #5c4220;
+  --terracotta: #b5522e;
+  --forest: #2e5c3a;
+  --ocean: #2a4a6b;
+  --gold: #c8922a;
+  --cosmos: #3a2a5c;
+  --divider: #c4a87a44;
+  --card-bg: #fffdf7;
+}
+
+body {
+  background-color: var(--parchment);
+  background-image:
+    radial-gradient(ellipse at 20% 50%, #d4c4a844 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, #c8b89044 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Ccircle cx='30' cy='30' r='0.8' fill='%238b6c42' fill-opacity='0.05'/%3E%3C/g%3E%3C/svg%3E");
+  font-family: 'Crimson Pro', Georgia, serif;
+  color: var(--ink);
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+/* ── HEADER ── */
+header {
+  position: relative;
+  text-align: center;
+  padding: 56px 40px 46px;
+  border-bottom: 2px solid var(--sepia-light);
+  overflow: hidden;
+}
+header::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, #e8dfc8 0%, var(--parchment) 60%);
+  z-index: 0;
+}
+.header-ornament {
+  position: relative; z-index: 1;
+  font-size: 11px; letter-spacing: 6px; text-transform: uppercase;
+  color: var(--sepia); margin-bottom: 16px; font-weight: 300;
+}
+h1 {
+  position: relative; z-index: 1;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 6vw, 68px);
+  font-weight: 900; letter-spacing: -1px; line-height: 1;
+  color: var(--sepia-dark); margin-bottom: 12px;
+}
+h1 em { color: var(--terracotta); font-style: italic; }
+.subtitle {
+  position: relative; z-index: 1;
+  font-size: 16px; font-weight: 300; font-style: italic;
+  color: var(--sepia); letter-spacing: 1px; margin-bottom: 20px;
+}
+.header-rule {
+  position: relative; z-index: 1;
+  display: flex; align-items: center; justify-content: center;
+  gap: 14px; margin: 20px auto 0; max-width: 320px;
+}
+.header-rule::before, .header-rule::after {
+  content: ''; flex: 1; height: 1px; background: var(--sepia-light);
+}
+.header-rule span { color: var(--gold); font-size: 9px; letter-spacing: 4px; }
+.header-stats {
+  position: relative; z-index: 1;
+  display: flex; justify-content: center; gap: 32px; flex-wrap: wrap;
+  margin-top: 24px;
+}
+.stat { text-align: center; }
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px; font-weight: 700; color: var(--sepia-dark);
+  display: block; line-height: 1;
+}
+.stat-label {
+  font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--sepia); font-weight: 300;
+}
+.stat-divider { width: 1px; background: var(--sepia-light); align-self: stretch; }
+
+/* ── TOC ── */
+.toc-wrapper {
+  max-width: 980px; margin: 36px auto 0; padding: 0 24px;
+}
+.toc {
+  background: var(--card-bg);
+  border: 1px solid var(--divider);
+  border-left: 4px solid var(--gold);
+  padding: 22px 28px;
+  display: flex; flex-wrap: wrap; gap: 6px 28px;
+  align-items: flex-start;
+}
+.toc-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 14px; width: 100%;
+}
+.toc-item {
+  font-size: 13.5px; color: var(--sepia-dark); text-decoration: none;
+  display: flex; align-items: center; gap: 8px;
+  padding: 3px 0; transition: color 0.15s;
+}
+.toc-item:hover { color: var(--terracotta); }
+.toc-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 10px; font-weight: 700;
+  background: var(--parchment-dark); border-radius: 50%;
+  width: 20px; height: 20px; display: inline-flex;
+  align-items: center; justify-content: center;
+  color: var(--sepia); flex-shrink: 0;
+}
+
+/* ── WRAPPER ── */
+.wrapper { max-width: 980px; margin: 0 auto; padding: 0 24px; }
+
+/* ── PART HEADER ── */
+.part-header {
+  display: flex; align-items: center; gap: 18px;
+  margin: 56px 0 28px;
+}
+.part-badge {
+  flex-shrink: 0; width: 52px; height: 52px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px; font-weight: 700; border: 2px solid;
+}
+.part-badge.cosmos  { background: #3a2a5c18; border-color: var(--cosmos);     color: var(--cosmos); }
+.part-badge.earth   { background: #2e5c3a18; border-color: var(--forest);     color: var(--forest); }
+.part-badge.geo     { background: #8b6c4218; border-color: var(--sepia-dark); color: var(--sepia-dark); }
+.part-badge.land    { background: #c8922a18; border-color: var(--gold);       color: var(--gold); }
+.part-badge.climate { background: #b5522e18; border-color: var(--terracotta); color: var(--terracotta); }
+.part-badge.ocean   { background: #2a4a6b18; border-color: var(--ocean);      color: var(--ocean); }
+.part-badge.zones   { background: #2e5c3a18; border-color: var(--forest);     color: var(--forest); }
+.part-badge.india   { background: #b5522e18; border-color: var(--terracotta); color: var(--terracotta); }
+
+.part-title-block { flex: 1; }
+.part-label {
+  font-size: 10px; letter-spacing: 4px; text-transform: uppercase;
+  font-weight: 600; margin-bottom: 4px;
+}
+.cosmos-c  { color: var(--cosmos); }
+.earth-c   { color: var(--forest); }
+.geo-c     { color: var(--sepia-dark); }
+.land-c    { color: var(--gold); }
+.climate-c { color: var(--terracotta); }
+.ocean-c   { color: var(--ocean); }
+.zones-c   { color: var(--forest); }
+.india-c   { color: var(--terracotta); }
+
+.part-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px; font-weight: 700; color: var(--ink); line-height: 1.1;
+}
+.part-line { flex: 1; height: 1px; background: var(--divider); }
+
+/* ── GRID ── */
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 18px; margin-bottom: 8px;
+}
+.section-grid.wide {
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+}
+
+/* ── CARD ── */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--divider);
+  border-top: 3px solid;
+  border-radius: 2px;
+  padding: 20px 22px 18px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.card:hover { box-shadow: 0 8px 28px #8b6c4220; transform: translateY(-2px); }
+
+.card.cosmos-t  { border-top-color: var(--cosmos); }
+.card.earth-t   { border-top-color: var(--forest); }
+.card.geo-t     { border-top-color: var(--sepia-dark); }
+.card.land-t    { border-top-color: var(--gold); }
+.card.climate-t { border-top-color: var(--terracotta); }
+.card.ocean-t   { border-top-color: var(--ocean); }
+.card.zones-t   { border-top-color: var(--forest); }
+.card.india-t   { border-top-color: var(--terracotta); }
+
+/* Roman numeral accent + title */
+.card-header {
+  display: flex; align-items: flex-start; gap: 12px;
+  margin-bottom: 14px; padding-bottom: 11px;
+  border-bottom: 1px solid var(--divider);
+}
+.card-numeral {
+  font-family: 'Playfair Display', serif;
+  font-size: 11px; font-weight: 700;
+  color: var(--sepia-light);
+  letter-spacing: 1px;
+  margin-top: 3px;
+  flex-shrink: 0;
+  min-width: 18px;
+  text-align: right;
+}
+.card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 15.5px; font-weight: 700;
+  color: var(--sepia-dark); line-height: 1.2;
+}
+
+/* ── TOPIC LIST ── */
+.topic-list { list-style: none; }
+.topic-list li {
+  font-size: 13.5px; font-weight: 300; line-height: 1.5;
+  padding: 5px 0 5px 14px;
+  position: relative;
+  border-bottom: 1px dotted #c4a87a2a;
+  color: #3a2a10;
+}
+.topic-list li:last-child { border-bottom: none; }
+.topic-list li::before {
+  content: '—';
+  position: absolute; left: 0; top: 5px;
+  font-size: 11px; color: var(--sepia-light);
+  line-height: 1.5;
+}
+.topic-list li strong { font-weight: 600; color: var(--ink); }
+.sub {
+  font-size: 12px; color: var(--sepia);
+  font-style: italic; display: block;
+  margin-top: 2px; line-height: 1.35;
+}
+
+/* ── FOOTER ── */
+footer {
+  text-align: center; margin-top: 64px; padding-top: 28px;
+  border-top: 1px solid var(--divider);
+  font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--sepia-light);
+}
+
+@media (max-width: 620px) {
+  .section-grid, .section-grid.wide { grid-template-columns: 1fr; }
+  .part-line { display: none; }
+  header { padding: 36px 18px 30px; }
+  .header-stats { gap: 18px; }
+  .toc { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ HEADER ══════════════════════════════════════════════════════════ -->
+<header>
+  <div class="header-ornament">Complete Examination Preparation Guide</div>
+  <h1>Geography <em>Syllabus</em></h1>
+  <p class="subtitle">A merged and comprehensive framework of all concepts for study</p>
+  <div class="header-rule"><span>✦ ✦ ✦</span></div>
+  <div class="header-stats">
+    <div class="stat">
+      <span class="stat-num">8</span>
+      <span class="stat-label">Major Units</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="stat-num">30+</span>
+      <span class="stat-label">Section Cards</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="stat-num">150+</span>
+      <span class="stat-label">Key Concepts</span>
+    </div>
+  </div>
+</header>
+
+<!-- ══ TABLE OF CONTENTS ═══════════════════════════════════════════════ -->
+<div class="toc-wrapper">
+  <div class="toc">
+    <div class="toc-title">Contents</div>
+    <a class="toc-item" href="#part1"><span class="toc-num">I</span> Cosmology &amp; Solar System</a>
+    <a class="toc-item" href="#part2"><span class="toc-num">II</span> Earth: Movements &amp; Time</a>
+    <a class="toc-item" href="#part3"><span class="toc-num">III</span> Geomorphology</a>
+    <a class="toc-item" href="#part4"><span class="toc-num">IV</span> Landforms</a>
+    <a class="toc-item" href="#part5"><span class="toc-num">V</span> Climatology</a>
+    <a class="toc-item" href="#part6"><span class="toc-num">VI</span> Oceanography</a>
+    <a class="toc-item" href="#part7"><span class="toc-num">VII</span> Global Climate Zones &amp; Biomes</a>
+    <a class="toc-item" href="#part8"><span class="toc-num">VIII</span> Indian Geography</a>
+  </div>
+</div>
+
+<div class="wrapper">
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!--  I. COSMOLOGY & SOLAR SYSTEM                                       -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<div id="part1" class="part-header">
+  <div class="part-badge cosmos">I</div>
+  <div class="part-title-block">
+    <div class="part-label cosmos-c">Unit One</div>
+    <div class="part-title">Cosmology &amp; The Solar System</div>
+  </div>
+  <div class="part-line"></div>
+</div>
+
+<div class="section-grid">
+  <div class="card cosmos-t">
+    <div class="card-header">
+      <span class="card-numeral">A</span>
+      <div class="card-title">The Universe &amp; Galaxies</div>
+    </div>
+    <ul class="topic-list">
+      <li><strong>Cosmology</strong><span class="sub">Age of universe (~13.8 billion years) · Big Bang Theory of origin</span></li>
+      <li><strong>Galaxies</strong><span class="sub">Types: spiral, elliptical · Milky Way · Andromeda as nearest neighbor</span></li>
+      <li><strong>Black Holes</strong><span class="sub">Sagittarius A* at centre of the Milky Way · Properties and detection</span></li>
+    </ul>
+  </div>
+
+  <div class="card cosmos-t">
+    <div class="card-header">
+      <span class="card-numeral">B</span>
+      <div class="card-title">The Sun &amp; Solar System</div>
+    </div>
+    <ul class="topic-list">
+      <li><strong>The Sun</strong><span class="sub">Nuclear fusion as energy source · Layers: Photosphere, Corona · India's Aditya L1 mission</span></li>
+      <li><strong>The 8 Planets</strong><span class="sub">Terrestrial (inner) vs. Jovian (outer/giant) planets · Moons · Orbital periods</span></li>
+      <li><strong>Small Bodies</strong><span class="sub">Asteroids · Comets · Kuiper Belt characteristics and orbits</span></li>
+      <li><strong>Goldilocks Zone</strong><span class="sub">Concept of the habitable zone around a star · Conditions for life</span></li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!--  II. EARTH: MOVEMENTS, MAPPING & TIME                              -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<div id="part2" class="part-header">
+  <div class="part-badge earth">II</div>
+  <div class="part-title-block">
+    <div class="part-label earth-c">Unit Two</div>
+    <div class="part-title">The Earth: Movements, Mapping &amp; Time</div>
+  </div>
+  <div class="part-line"></div>
+</div>
+
+<div class="section-grid">
+  <div class="card earth-t">
+    <div class="card-header">
+      <span class="card-numeral">A</span>
+      <div class="card-title">Earth's Form &amp; Movements</div>
+    </div>
+    <ul class="topic-list">
+      <li><strong>Earth's Shape</strong><span class="sub">Oblate spheroid · Polar vs. equatorial diameters · Position in solar system</span></li>
+      <li><strong>Rotation &amp; Revolution</strong><span class="sub">Impact on day/night and seasons</span></li>
+      <li><strong>Perihelion &amp; Aphelion</strong><span class="sub">Closest and farthest positions from the Sun</span></li>
+      <li><strong>Solstices &amp; Equinoxes</strong><span class="sub">Summer/Winter Solstices · Vernal/Autumnal Equinoxes</span></li>
+      <li><strong>Eclipses</strong><span class="sub">Solar &amp; Lunar eclipse mechanics · Syzygy concept</span></li>
+    </ul>
+  </div>
+
+  <div class="card earth-t">
+    <div class="card-header">
+      <span class="card-numeral">B</span>
+      <div class="card-title">Geographic Grid &amp; Time</div>
+    </div>
+    <ul class="topic-list">
+      <li><strong>Latitude</strong><span class="sub">Parallels · Great Circles (Equator) · Tropics of Cancer &amp; Capricorn</span></li>
+      <li><strong>Longitude</strong><span class="sub">Meridians · Prime Meridian · International Date Line (IDL)</span></li>
+      <li><strong>Time Calculation</strong><span class="sub">15° = 1 hour rule · Indian Standard Time (IST) · Time zones</span></li>
+      <li><strong>Geological Time Scale</strong><span class="sub">Eras &amp; periods · Quaternary period · Precambrian (oldest era)</span></li>
+      <li><strong>India's Extent</strong><span class="sub">Latitudinal &amp; longitudinal coordinates · Durand Line · Radcliffe/Rajah border</span></li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!--  III. GEOMORPHOLOGY                                                 -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<div id="part3" class="part-header">
+  <div class="part-badge geo">III</div>
+  <div class="part-title-block">
+    <div class="part-label geo-c">Unit Three</div>
+    <div class="part-title">Geomorphology: The Lithosphere</div>
+  </div>
+  <div class="part-line"></div>
+</div>
+
+<div class="section-grid">
+  <div class="card geo-t">
+    <div class="card-header">
+      <span class="card-numeral">A</span>
+      <div class="card-title">Interior Structure of the Earth</div>
+    </div>
+    <ul class="topic-list">
+      <li><strong>Chemical Layers</strong><span class="sub">Crust (SIAL) · Mantle (SIMA) · Core (NIFE)</span></li>
+      <li><strong>Physical Layers</strong><span class="sub">Lithosphere · Asthenosphere (semi-liquid "weak" zone) · Mesosphere</span></li>
+      <li><strong>Discontinuities</strong><span class="sub">Conrad · Mohorovicic · Repetti · Gutenberg · Lehmann</span></li>
+    </ul>
+  </div>
+
+  <div class="card geo-t">
+    <div class="card-header">
+      <span class="card-numeral">B</span>
+      <div class="card-title">Earth Materials &amp; Rocks</div>
+    </div>
+    <ul class="topic-list">
+      <li><strong>Minerals</strong><span class="sub">Crystalline structures · Mohs hardness scale</span></li>
+      <li><strong>Igneous Rocks</strong><span class="sub">Intrusive: Laccoliths, Batholiths · Extrusive types</span></li>
+      <li><strong>Sedimentary Rocks</strong><span class="sub">Formation processes · Classification</span></li>
+      <li><strong>Metamorphic Rocks</strong><span class="sub">Heat &amp; pressure transformation</span></li>
+      <li><strong>The Rock Cycle</strong><span class="sub">Continuous transformation of earth materials</span></li>
+    </ul>
+  </div>
+
+  <div class="card geo-t">
+    <div class="card-header">
+      <span class="card-numeral">C</span>
+      <div class="card-title">Tectonism &amp; Plate Boundaries</div>
+    </div>
+    <ul class="topic-list">
+      <li><strong>Continental Drift</strong><span class="sub">Wegner's Pangea · Laurasia &amp; Gondwana</span></li>
+      <li><strong>Plate Tectonics</strong><span class="sub">7 major plates + minor plates · Asthenosphere as base · Convective cells</span></li>
+      <li><strong>Divergent Boundaries</strong><span class="sub">Constructive margins · Oceanic ridges</span></li>
+      <li><strong>Convergent Boundaries</strong><span class="sub">Destructive margins · Oceanic trenches · Subduction</span></li>
+      <li><strong>Transform Boundaries</strong><span class="sub">Shearing / conservative margins</span></li>
+    </ul>
+  </div>
+
+  <div class="card geo-t">
+    <div class="card-header">
+      <span class="card-numeral">D</span>
+      <div class="card-title">Geomorphic Processes</div>
+    </div>
+    <ul class="topic-list">
+      <li><strong>Earthquakes</strong><span class="sub">Focus &amp; Epicentre · P, S &amp; L waves · Shadow zones · Richter &amp; Mercalli scales</span></li>
+      <li><strong>Volcanism</strong><span class="sub">Shield · Composite · Cinder cone · Caldera landforms</span></li>
+      <li><strong>Weathering</strong><span class="sub">Physical (mechanical) · Chemical · Biological</span></li>
+      <li><strong>Erosion &amp; Mass Wasting</strong><span class="sub">Landslides · Avalanches · Denudation processes</span></li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!--  IV. LANDFORMS                                                      -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<div id="part4" class="part-header">
+  <div class="part-badge land">IV</div>
+  <div class="part-title-block">
+    <div class="part-label land-c">Unit Four</div>
+    <div class="part-title">Landforms</div>
+  </div>
+  <div class="part-line"></div>
+</div>
+
+<div class="section-grid">
+  <div class="card land-t">
+    <div class="card-header">
+      <span class="card-numeral">A</span>
+      <div class="card-title">Mountains &amp; Plateaus</div>
+    </div>
+    <ul class="topic-list">
+      <li><strong>Fold Mountains</strong><span class="sub">Compressive forces · e.g., Himalayas, Alps, Rockies</span></li>
+      <li><strong>Block Mountains</strong><span class="sub">Faulting / rift valleys</span></li>
+      <li><strong>Volcanic &amp; Residual Mountains</strong><span class="sub">Formation processes · Tors</span></li>
+      <li><strong>Plateau Types</strong><span class="sub">Intermontane · Piedmont · Continental/Tectonic</span></li>
+    </ul>
+  </div>
+
+  <div class="card land-t">
+    <div class="card-header">
+      <span class="card-numeral">B</span>
+      <div class="card-title">Fluvial (River) Landforms</div>
+    </div>
+    <ul class="topic-list">
+      <li><strong>Erosional Features</strong><span class="sub">V-shaped valleys · Gorges · Canyons · Waterfalls (e.g., Jog Falls)</span></li>
+      <li><strong>Depositional Features</strong><span class="sub">Deltas · Floodplains · Levees · Meanders · Ox-bow lakes</span></li>
+    </ul>
+  </div>
+
+  <div class="card land-t">
+    <div class="card-header">
+      <span class="card-numeral">C</span>
+      <div class="card-title">Glacial Landforms</div>
+    </div>
+    <ul class="topic-list">
+      <li><strong>Erosional</strong><span class="sub">Cirques · Arêtes · Horns (Pyramidal peaks) · U-shaped valleys</span></li>
+      <li><strong>Depositional</strong><span class="sub">Moraines · Drumlins · Eskers · Kames</span></li>
+    </ul>
+  </div>
+
+  <div class="card land-t">
+    <div class="card-header">
+      <span class="card-numeral">D</span>
+      <div class="card-title">Aeolian &amp; Lake Landforms</div>
+    </div>
+    <ul class="topic-list">
+      <li><strong>Wind Erosional</strong><span class="sub">Yardangs · Mushroom rocks · Inselbergs</span></li>
+      <li><strong>Wind Depositional</strong><span class="sub">Sand dunes · Barchans · Seifs · Loess · Playas</span></li>
+      <li><strong>Lakes by Origin</strong><span class="sub">Tectonic (Caspian) · Volcanic/Crater · Glacial (Great Lakes) · Ox-bow · Lagoon/Marine (Chilika, Roopkund)</span></li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!--  V. CLIMATOLOGY                                                     -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<div id="part5" class="part-header">
+  <div class="part-badge climate">V</div>
+  <div class="part-title-block">
+    <div class="part-label climate-c">Unit Five</div>
+    <div class="part-title">Climatology: The Atmosphere</div>
+  </div>
+  <div class="part-line"></div>
+</div>
+
+<div class="section-grid">
+  <div class="card climate-t">
+    <div class="card-header">
+      <span class="card-numeral">A</span>
+      <div class="card-title">Structure &amp; Heating</div>
+    </div>
+    <ul class="topic-list">
+      <li><strong>Atmospheric Layers</strong><span class="sub">Troposphere (weather layer) · Stratosphere (tropopause) · Mesosphere · Thermosphere · Exosphere</span></li>
+      <li><strong>Atmospheric Composition</strong><span class="sub">Chemical makeup of air</span></li>
+      <li><strong>Heating Processes</strong><span class="sub">Insolation · Albedo effect · Conduction · Convection · Radiation · Advection</span></li>
+      <li><strong>Temperature Inversion</strong><span class="sub">Conditions where temperature increases with altitude (positive lapse rate)</span></li>
+    </ul>
+  </div>
+
+  <div class="card climate-t">
+    <div class="card-header">
+      <span class="card-numeral">B</span>
+      <div class="card-title">Pressure, Wind &amp; Coriolis</div>
+    </div>
+    <ul class="topic-list">
+      <li><strong>Pressure Belts</strong><span class="sub">Equatorial Low (Doldrums) · Subtropical High (Horse Latitudes) · Subpolar Low · Polar High</span></li>
+      <li><strong>Planetary Winds</strong><span class="sub">Trade Winds · Westerlies · Polar Easterlies</span></li>
+      <li><strong>Coriolis Effect</strong><span class="sub">Deflection of winds due to Earth's rotation</span></li>
+      <li><strong>Local Winds</strong><span class="sub">Harmattan · Mistral and others</span></li>
+      <li><strong>Cyclones &amp; Anticyclones</strong><span class="sub">Rotation patterns · Eye of the storm · Air fronts</span></li>
+    </ul>
+  </div>
+
+  <div class="card climate-t">
+    <div class="card-header">
+      <span class="card-numeral">C</span>
+      <div class="card-title">Humidity &amp; Precipitation</div>
+    </div>
+    <ul class="topic-list">
+      <li><strong>Humidity Types</strong><span class="sub">Absolute · Specific · Relative Humidity · Dew Point concept</span></li>
+      <li><strong>Cloud Formation</strong><span class="sub">Condensation processes · Cirrus · Cumulus · Stratus · Nimbus</span></li>
+      <li><strong>Rainfall Types</strong><span class="sub">Convectional · Orographic (Rainshadow effect) · Cyclonic/Frontal</span></li>
+      <li><strong>ITCZ</strong><span class="sub">Inter-Tropical Convergence Zone and its role in climate</span></li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!--  VI. OCEANOGRAPHY                                                   -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<div id="part6" class="part-header">
+  <div class="part-badge ocean">VI</div>
+  <div class="part-title-block">
+    <div class="part-label ocean-c">Unit Six</div>
+    <div class="part-title">Oceanography: The Hydrosphere</div>
+  </div>
+  <div class="part-line"></div>
+</div>
+
+<div class="section-grid">
+  <div class="card ocean-t">
+    <div class="card-header">
+      <span class="card-numeral">A</span>
+      <div class="card-title">Oceanic Relief &amp; Coral Reefs</div>
+    </div>
+    <ul class="topic-list">
+      <li><strong>Oceanic Relief Features</strong><span class="sub">Continental Shelves · Slopes · Abyssal Plains · Seamounts · Guyots</span></li>
+      <li><strong>Coral Reefs</strong><span class="sub">Formation by polyps · Mutualism with algae · Threats: ocean acidification</span></li>
+    </ul>
+  </div>
+
+  <div class="card ocean-t">
+    <div class="card-header">
+      <span class="card-numeral">B</span>
+      <div class="card-title">Ocean Currents</div>
+    </div>
+    <ul class="topic-list">
+      <li><strong>Causes</strong><span class="sub">Wind · Salinity · Density differences</span></li>
+      <li><strong>Warm Currents</strong><span class="sub">Gulf Stream · Kuroshio · Agulhas · Alaska</span></li>
+      <li><strong>Cold Currents</strong><span class="sub">Benguela · California · Humboldt (Peru)</span></li>
+      <li><strong>Upwelling &amp; Gyres</strong><span class="sub">Mechanisms and effects on marine life and climate</span></li>
+    </ul>
+  </div>
+
+  <div class="card ocean-t">
+    <div class="card-header">
+      <span class="card-numeral">C</span>
+      <div class="card-title">Marine Oscillations &amp; Tides</div>
+    </div>
+    <ul class="topic-list">
+      <li><strong>ENSO</strong><span class="sub">El Niño &amp; La Niña · Global climatic impacts</span></li>
+      <li><strong>Indian Ocean Dipole (IOD)</strong><span class="sub">Mechanism and influence on Indian monsoon</span></li>
+      <li><strong>Spring Tides</strong><span class="sub">Syzygy (Sun, Moon, Earth aligned) · Higher tidal range</span></li>
+      <li><strong>Neap Tides</strong><span class="sub">Quadrature (Moon at right angle) · Lower tidal range</span></li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!--  VII. GLOBAL CLIMATE ZONES & BIOMES                                -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<div id="part7" class="part-header">
+  <div class="part-badge zones">VII</div>
+  <div class="part-title-block">
+    <div class="part-label zones-c">Unit Seven</div>
+    <div class="part-title">Global Climate Zones &amp; Biomes</div>
+  </div>
+  <div class="part-line"></div>
+</div>
+
+<div class="section-grid wide">
+  <div class="card zones-t">
+    <div class="card-header">
+      <span class="card-numeral">A</span>
+      <div class="card-title">Tropical &amp; Hot Zones</div>
+    </div>
+    <ul class="topic-list">
+      <li><strong>Equatorial / Tropical Rainforest</strong><span class="sub">High rainfall all year · Dense canopy layers · High biodiversity</span></li>
+      <li><strong>Tropical Monsoon</strong><span class="sub">Seasonal rainfall · Deciduous forests</span></li>
+      <li><strong>Savanna / Tropical Grasslands</strong><span class="sub">Steppes &amp; Prairies · Wet/dry seasonal rhythm</span></li>
+      <li><strong>Desert Climate</strong><span class="sub">Hot &amp; cold deserts · Arid zone vegetation</span></li>
+    </ul>
+  </div>
+
+  <div class="card zones-t">
+    <div class="card-header">
+      <span class="card-numeral">B</span>
+      <div class="card-title">Temperate &amp; Cold Zones</div>
+    </div>
+    <ul class="topic-list">
+      <li><strong>Mediterranean Climate</strong><span class="sub">Winter rainfall · Citrus fruit cultivation · Chaparral vegetation</span></li>
+      <li><strong>Humid Subtropical</strong><span class="sub">Hot summers · Mild wet winters</span></li>
+      <li><strong>Boreal / Subarctic</strong><span class="sub">Coniferous forests (Taiga) · Long cold winters</span></li>
+      <li><strong>Polar Climate</strong><span class="sub">Hardy species: mosses &amp; lichens · Tundra biome</span></li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!--  VIII. INDIAN GEOGRAPHY                                             -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<div id="part8" class="part-header">
+  <div class="part-badge india">VIII</div>
+  <div class="part-title-block">
+    <div class="part-label india-c">Unit Eight</div>
+    <div class="part-title">Indian Geography</div>
+  </div>
+  <div class="part-line"></div>
+</div>
+
+<div class="section-grid">
+  <div class="card india-t">
+    <div class="card-header">
+      <span class="card-numeral">A</span>
+      <div class="card-title">Physiography &amp; Drainage</div>
+    </div>
+    <ul class="topic-list">
+      <li><strong>Major Regions</strong><span class="sub">Himalayas · Peninsular plateau · Northern plains (Bhabar &amp; Tarai belts) · Coastal regions</span></li>
+      <li><strong>Mountain Systems</strong><span class="sub">Passes: Zoji La, Banihal · Mahendragiri (Eastern Ghats)</span></li>
+      <li><strong>River Systems</strong><span class="sub">Ganges · Brahmaputra · Indus · Godavari — course, origins &amp; tributaries</span></li>
+      <li><strong>Hydrological Features</strong><span class="sub">Jog Falls · Roopkund lake</span></li>
+    </ul>
+  </div>
+
+  <div class="card india-t">
+    <div class="card-header">
+      <span class="card-numeral">B</span>
+      <div class="card-title">Climate, Soils &amp; Vegetation</div>
+    </div>
+    <ul class="topic-list">
+      <li><strong>Monsoon Patterns</strong><span class="sub">Southwest monsoon · Western Disturbances · Agricultural impact</span></li>
+      <li><strong>Soil Types</strong><span class="sub">Regur/Black cotton soil · Laterite · Alluvial · Organic soils</span></li>
+      <li><strong>Natural Vegetation</strong><span class="sub">Sholas (South India) · Himalayan Oak · Rhododendron</span></li>
+    </ul>
+  </div>
+
+  <div class="card india-t">
+    <div class="card-header">
+      <span class="card-numeral">C</span>
+      <div class="card-title">Resources &amp; Economic Geography</div>
+    </div>
+    <ul class="topic-list">
+      <li><strong>Mineral Resources</strong><span class="sub">Iron ore (Bailadila) · Copper · Bauxite · Manganese mining centres</span></li>
+      <li><strong>Industries</strong><span class="sub">Iron &amp; Steel plants: Bokaro, Rourkela · Thermal power plants</span></li>
+      <li><strong>Agriculture</strong><span class="sub">Bajra · Wheat · Cotton · Maize introduction · Sericulture · Apiculture</span></li>
+      <li><strong>Energy Projects</strong><span class="sub">Hydroelectric &amp; thermal power projects across states</span></li>
+    </ul>
+  </div>
+
+  <div class="card india-t">
+    <div class="card-header">
+      <span class="card-numeral">D</span>
+      <div class="card-title">Infrastructure &amp; Human Geography</div>
+    </div>
+    <ul class="topic-list">
+      <li><strong>Transportation</strong><span class="sub">North–South &amp; East–West corridors · National Highway network · Ports: Kandla, Mormugao</span></li>
+      <li><strong>Conservation</strong><span class="sub">Ramsar wetland sites · Eco-sensitive zones</span></li>
+      <li><strong>Political Geography</strong><span class="sub">Administrative divisions (States/UTs) · International borders · Assam's boundaries</span></li>
+    </ul>
+  </div>
+</div>
+
+</div><!-- /wrapper -->
+
+<footer>
+  Complete Geography Examination Syllabus &nbsp;·&nbsp; All Eight Units
+</footer>
+
+</body>
+</html>
